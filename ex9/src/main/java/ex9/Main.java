@@ -65,17 +65,19 @@ public class Main
         System.out.println("\n===== RACE RESULTS =====");
         List<Driver> firstRaceResultsDrivers = firstRaceResult.getResults();
         System.out.println(String.format("Race: %s (%s)", firstRaceResult.getRaceName(), firstRaceResult.getLocation()));
+        int i = 1;
         for (Driver driver : firstRaceResultsDrivers) {
-            int i = 1;
+            
             System.out.println(String.format("    Position %d: %s - %d points",i, driver.getName(), firstRaceResult.getDriverPoints(driver)));
-            i++;
+            i=i+1;
         }
 
         List<Driver> secondRaceResultsDrivers = secondRaceResult.getResults();
         System.out.println(String.format("\nRace: %s (%s)", secondRaceResult.getRaceName(), secondRaceResult.getLocation()));
+        i=1;
         for (Driver driver : secondRaceResultsDrivers) {
-            int i = 1;
             System.out.println(String.format("    Position %d: %s - %d points",i, driver.getName(), secondRaceResult.getDriverPoints(driver)));
+            i = i+1;
         }
 
         System.out.println("\n=====  CAR PERFORMANCE RATINGS =====");
