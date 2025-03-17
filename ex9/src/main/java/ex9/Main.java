@@ -10,7 +10,7 @@ public class Main
 {
     public static void main( String[] args )
     {
-        ChampionshipManager championship = ChampionshipManager.getInstance();
+       
 
         AsphaltCar sebAsphaltCar = new AsphaltCar("Hyundai", "i20 Coupe WRC", 600, 1.3);
         Driver sebastienDriver = new Driver("Sébastien Ogier", "France", sebAsphaltCar);
@@ -43,7 +43,7 @@ public class Main
         championshipManager.registerDriver(ottDriver);
 
         championshipManager.addRaceResult(firstRaceResult);
-        championship.addRaceResult(secondRaceResult);
+        championshipManager.addRaceResult(secondRaceResult);
 
         List<Driver> driversStanding = championshipManager.getDriverStandings();
         for (Driver driver : driversStanding) {
